@@ -232,6 +232,53 @@
     .edu-header strong{ color: var(--text-main); font-weight: 700; }
     .edu-date{ color: var(--text-muted); font-size: 13px; font-style: italic; }
 
+    /* ===== Experience ===== */
+    .experience-grid{
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 28px 32px;
+      align-items: start;
+      margin: 22px 0 8px;
+    }
+    .experience-item{
+      display: grid;
+      grid-template-columns: 80px minmax(0, 1fr);
+      align-items: start;
+      gap: 18px;
+      min-width: 0;
+    }
+    .experience-logo-frame{
+      width: 80px;
+      height: 96px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .experience-logo{
+      display: block;
+      width: 64px;
+      height: 64px;
+      object-fit: contain;
+    }
+    .experience-logo-didi{ width: 76px; height: auto; }
+    .experience-details{ min-width: 0; line-height: 24px; }
+    .experience-company{ font-weight: 600; }
+    .experience-role{ color: var(--text-main); }
+    .experience-date{ font-style: italic; color: var(--text-muted); font-size: 14px; }
+    .experience-mentor{ font-size: 14px; }
+    @media (max-width: 640px){
+      .experience-grid{ gap: 24px 16px; }
+      .experience-item{ grid-template-columns: 52px minmax(0, 1fr); gap: 10px; }
+      .experience-logo-frame{ width: 52px; height: 80px; }
+      .experience-logo{ width: 44px; height: 44px; }
+      .experience-logo-didi{ width: 52px; height: auto; }
+      .experience-details{ font-size: 13px; line-height: 20px; }
+      .experience-mentor, .experience-date{ font-size: 12px; }
+    }
+    @media (max-width: 440px){
+      .experience-grid{ grid-template-columns: 1fr; }
+    }
+
     /* ===== News ===== */
     .news-list{
       list-style: none;
@@ -503,8 +550,11 @@
 
     <p class="bio-text">
       👋 Hi! I am Bonan Wang, a first-year Ph.D. student at Texas A&M University, co-advised by <a href='https://engineering.tamu.edu/civil/profiles/zhou-yang.html'>Prof. Yang Zhou</a> and <a href='https://yunlongzhang.engr.tamu.edu/'>Prof. Yunlong Zhang</a>.
-      Previously, I received my Master's degree from the University of Macau, advised by <a href='https://personal.feg.um.edu.mo/zhenningli/'>Prof. Zhenning Li.</a> and my Bachelor's degree from Shaanxi University of Science and Technology. Before joining Texas A&M, I was fortunate to be mentored by 
-      <a href='https://scholar.google.com/citations?user=Dxiw1K8AAAAJ&hl=en'>Prof. Shengbo Eben Li</a> at Tsinghua University, and worked as a joint intern at DiDi Chuxing. My research interests lie in Physical AI and autonomous driving, with a focus on enabling intelligent agents to perceive, reason, and act in complex, dynamic environments.
+      Previously, I received my Master's degree from the University of Macau, advised by <a href='https://personal.feg.um.edu.mo/zhenningli/'>Prof. Zhenning Li.</a> and my Bachelor's degree from Shaanxi University of Science and Technology.
+    </p>
+
+    <p class="bio-text">
+      My research interests lie in Physical AI and autonomous driving, with a focus on enabling intelligent agents to perceive, reason, and act in complex, dynamic environments.
     </p>
 
 
@@ -534,6 +584,28 @@
         B.S in Mathematics <em>(Outstanding Undergraduate)</em>
       </li>
     </ul>
+
+    <h2 id="experience">Experience</h2>
+    <div class="experience-grid">
+      <div class="experience-item">
+        <div class="experience-logo-frame"><img class="experience-logo" src="./img/tsinghua-logo-transparent.png" alt="Tsinghua University emblem" width="64" height="64" loading="lazy" /></div>
+        <div class="experience-details">
+          <div class="experience-company">Tsinghua University</div>
+          <div class="experience-role">Research Intern</div>
+          <div class="experience-date"><time datetime="2025-11">Nov. 2025</time> &ndash; <time datetime="2026-04">Apr. 2026</time></div>
+          <div class="experience-mentor">Mentor: <a href="https://scholar.google.com/citations?user=Dxiw1K8AAAAJ&amp;hl=en" target="_blank" rel="noopener">Prof. Shengbo Eben Li</a></div>
+        </div>
+      </div>
+      <div class="experience-item">
+        <div class="experience-logo-frame"><img class="experience-logo experience-logo-didi" src="./img/didi-wordmark.svg" alt="DiDi Chuxing logo" width="99" height="38" loading="lazy" /></div>
+        <div class="experience-details">
+          <div class="experience-company">DiDi Chuxing</div>
+          <div class="experience-role">Research Intern</div>
+          <div class="experience-date"><time datetime="2025-11">Nov. 2025</time> &ndash; <time datetime="2026-04">Apr. 2026</time></div>
+          <div class="experience-mentor">Mentor: <a href="https://scholar.google.com/citations?user=b6vbCzMAAAAJ&amp;hl=zh-CN" target="_blank" rel="noopener">Dr. Yang Guan</a></div>
+        </div>
+      </div>
+    </div>
 
     <!-- <h2 id="news">News</h2>
     <ul class="news-list" id="newsList">
@@ -684,8 +756,8 @@
 
     <h2 id="services">Professional Services</h2>
     <ul>
-        IEEE TNNLS, Transportation Research Part C, EAAI, ESWA, KBS, Neurocomputing, PRL, JTTE, NN, IJCAI, ICRA.
-      <!-- <li><strong>Invited AI Conference Reviewer:</strong> CVPR, AAAI, ACM MM, ICRA, IJCAI ...</li> -->
+      <li><strong>Journal Reviewer:</strong> IEEE TNNLS, <span title="Transportation Research Part C: Emerging Technologies">TR-C</span>, EAAI, ESWA, KBS, Neurocomputing, PRL, JTTE, NN.</li>
+      <li><strong>Conference Reviewer:</strong> IJCAI, ICRA.</li>
     </ul>
 
     <div class="footer-widget">
